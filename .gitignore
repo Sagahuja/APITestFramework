@@ -2,6 +2,9 @@
 *.class
 
 # Log file
+.classpath
+.project
+.settings
 *.log
 
 # BlueJ files
