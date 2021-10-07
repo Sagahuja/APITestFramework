@@ -1,17 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-10-07T09:24:08 IST" name="Default suite" finished-at="2021-10-07T09:24:17 IST" duration-ms="9259">
+  <suite started-at="2021-10-07T20:20:48 IST" name="Default suite" finished-at="2021-10-07T20:20:53 IST" duration-ms="4169">
     <groups>
     </groups>
-    <test started-at="2021-10-07T09:24:08 IST" name="Default test" finished-at="2021-10-07T09:24:17 IST" duration-ms="9259">
-      <class name="apiTestCases.AddPlace2">
-        <test-method signature="setAPIEnvironment()[pri:0, instance:apiTestCases.AddPlace2@10163d6]" started-at="2021-10-07T09:24:08 IST" name="setAPIEnvironment" finished-at="2021-10-07T09:24:17 IST" duration-ms="9173" status="PASS">
+    <test started-at="2021-10-07T20:20:48 IST" name="Default test" finished-at="2021-10-07T20:20:53 IST" duration-ms="4169">
+      <class name="apiTestCases.AddPlace3">
+        <test-method signature="setAPIEnvironment()[pri:0, instance:apiTestCases.AddPlace3@48974e45]" started-at="2021-10-07T20:20:48 IST" name="setAPIEnvironment" finished-at="2021-10-07T20:20:53 IST" duration-ms="4102" status="FAIL">
+          <exception class="io.restassured.path.json.exception.JsonPathException">
+            <message>
+              <![CDATA[Failed to parse the JSON document]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document
+at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1002)
+at io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967)
+at io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)
+at io.restassured.path.json.JsonPath.get(JsonPath.java:202)
+at io.restassured.path.json.JsonPath.getString(JsonPath.java:352)
+at apiTestCases.AddPlace3.setAPIEnvironment(AddPlace3.java:41)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: groovy.json.JsonException: Lexing failed on line: 1, column: 1, while reading '<', no possible valid JSON value or punctuation could be recognized.
+at groovy.json.JsonLexer.nextToken(JsonLexer.java:86)
+at groovy.json.JsonLexer$nextToken.call(Unknown Source)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:130)
+at io.restassured.internal.path.json.ConfigurableJsonSlurper.parse(ConfigurableJsonSlurper.groovy:97)
+at io.restassured.internal.path.json.ConfigurableJsonSlurper$parse.callCurrent(Unknown Source)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+at io.restassured.internal.path.json.ConfigurableJsonSlurper.parseText(ConfigurableJsonSlurper.groovy:83)
+at io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:965)
+at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1000)
+... 33 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.restassured.path.json.exception.JsonPathException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setAPIEnvironment -->
-      </class> <!-- apiTestCases.AddPlace2 -->
+      </class> <!-- apiTestCases.AddPlace3 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
